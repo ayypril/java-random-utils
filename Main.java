@@ -16,6 +16,7 @@ class Main {
 
         System.out.println("Testing:");
         System.out.println(randomInt());
+        testRandChar();
     }
 
     /**
@@ -28,4 +29,26 @@ class Main {
         int randInt = r.nextInt(100);
         return randInt;
     }
+
+
+    // random number from 0 to ceil
+    public static int randNumCeil(int ceil){
+        Random r = new Random();
+        int randInt = r.nextInt(ceil);
+        return randInt;
+    }
+
+    public static char randChar(){
+        Random r = new Random();
+        return (char)(r.nextInt(26) + 'a');
+    }
+
+    // it works!!!
+    public static void testRandChar(){
+        System.out.println(randChar());
+    }
+
+
+
+
 }
