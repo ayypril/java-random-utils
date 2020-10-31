@@ -17,14 +17,17 @@ class Main {
         System.out.println("Testing:");
         System.out.println(randomInt());
         testRandChar();
+
+
     }
 
     /**
      * returns a random number from 0 to 100.
      * uses java.util.Random
+     *
      * @return
      */
-    public static int randomInt(){
+    public static int randomInt() {
         Random r = new Random();
         int randInt = r.nextInt(100);
         return randInt;
@@ -32,21 +35,38 @@ class Main {
 
 
     // random number from 0 to ceil
-    public static int randNumCeil(int ceil){
+    public static int randNumCeil(int ceil) {
         Random r = new Random();
         int randInt = r.nextInt(ceil);
         return randInt;
     }
 
-    public static char randChar(){
+    public static char randChar() {
         Random r = new Random();
-        return (char)(r.nextInt(26) + 'a');
+        return (char) (r.nextInt(26) + 'a');
     }
 
     // it works!!!
-    public static void testRandChar(){
-        System.out.println(randChar());
+    public static void testRandChar() {
+        System.out.print(randChar());
     }
+
+
+    public static void randCharLoop() {
+        for (int i = 0; i < 99; i++) {
+            testRandChar();
+        }
+    }
+
+
+    public static void getRandCharAmount(int amount) {
+        for (int i = 0; i < amount; i++) {
+            testRandChar();
+        }
+    }
+}
+
+
 
 
 
