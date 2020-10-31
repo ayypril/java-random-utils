@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
@@ -17,6 +18,18 @@ class Main {
         System.out.println("Testing:");
         System.out.println(randomInt());
         testRandChar();
+
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the amount of random integers you want.");
+        int numOfRandChars = s.nextInt();
+        getRandCharAmount(numOfRandChars);
+
+
+        System.out.println("Enter the ceiling for your random numbers.");
+        int ceiling = s.nextInt();
+        randNumCeil(ceiling);
+
 
 
     }
